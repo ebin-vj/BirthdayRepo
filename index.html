@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love - Anju Saji</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #ff66b2, #ffd700, #00ffff);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    overflow-x: hidden;
+    color: white;
+    text-align: center;
+  }
+
+  @keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  header {
+    padding: 100px 20px 60px;
+  }
+
+  h1 {
+    font-size: 3em;
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255,215,0,0.8);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #ff99cc, 0 0 20px #ffd700; }
+    to { text-shadow: 0 0 30px #ff66b2, 0 0 60px #ffd700; }
+  }
+
+  .message {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.2em;
+    background: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+
+  .gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+  }
+
+  .gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    transition: transform 0.3s;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.1);
+  }
+
+  footer {
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 1em;
+    color: #fff;
+    background: rgba(0,0,0,0.3);
+  }
+
+  /* Floating hearts animation */
+  .heart {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 105, 180, 0.8);
+    transform: rotate(45deg);
+    animation: floatHearts 6s linear infinite;
+    bottom: -10px;
+  }
+
+  .heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 105, 180, 0.8);
+    border-radius: 50%;
+  }
+
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+
+  .heart::after {
+    left: 10px;
+    top: 0;
+  }
+
+  @keyframes floatHearts {
+    0% { transform: translateY(0) rotate(45deg) scale(1); opacity: 1; }
+    100% { transform: translateY(-800px) rotate(45deg) scale(0.5); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Happy Birthday My Sweetheart, Anju Saji 💖</h1>
+  <p class="message">
+    You are the light that brightens every corner of my heart.  
+    Every day with you feels like a blessing, and today — your birthday — reminds me how lucky I am to have you in my life.  
+    I love you endlessly, my dearest Anju. 💫  
+    <br><br>
+    — With all my love, <b>Ebin Joseph</b>
+  </p>
+</header>
+
+<section class="gallery">
+  <img src="https://source.unsplash.com/250x250/?love" alt="photo1">
+  <img src="https://source.unsplash.com/250x250/?roses" alt="photo2">
+  <img src="https://source.unsplash.com/250x250/?couple" alt="photo3">
+  <img src="https://source.unsplash.com/250x250/?cake" alt="photo4">
+  <img src="https://source.unsplash.com/250x250/?hearts" alt="photo5">
+</section>
+
+<footer>
+  <p>Made with 💖 by <b>Ebin Joseph</b> for his beloved wife <b>Anju Saji</b>.</p>
+</footer>
+
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Floating heart generator
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }
+
+  setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
