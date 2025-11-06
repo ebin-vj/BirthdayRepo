@@ -131,7 +131,7 @@
 
 <button class="button" onclick="showSurprise()">Click for Magic ✨</button>
 
-<audio id="bgm" src="music.mp3" loop></audio>
+<audio id="bgm" src="audio.mp3" loop autoplay></audio>
 
 <script>
   function createHeart() {
@@ -145,9 +145,12 @@
 
   function showSurprise() {
     document.getElementById("bgm").play();
-    setInterval(createHeart, 200);
-    alert("💖 Surprise! You are the most precious gift life ever gave me, Anju 💖");
+    setInterval(createHeart, 400);
   }
+
+  window.onload = () => {
+    document.getElementById("bgm").play();
+  };
 </script>
 
 </body>
