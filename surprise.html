@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Surprise for You, My Love 💖</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #ff66b2, #000);
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  nav {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+  }
+  nav a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: #00ffff;
+  }
+
+  h1 {
+    margin-top: 100px;
+    font-size: 3em;
+    color: #ffd700;
+    text-shadow: 0 0 20px #ff99cc;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #ff66b2, 0 0 20px #ffd700; }
+    to { text-shadow: 0 0 30px #ff99cc, 0 0 60px #ffd700; }
+  }
+
+  .message {
+    margin: 50px auto;
+    max-width: 700px;
+    background: rgba(0,0,0,0.5);
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 1.3em;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+    animation-delay: 3s;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  .button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #ffd700, #ff66b2, #00ffff);
+    border: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+  }
+  .button:hover {
+    transform: scale(1.1);
+  }
+
+  /* Floating hearts animation */
+  .heart {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 105, 180, 0.8);
+    transform: rotate(45deg);
+    animation: floatHearts 6s linear infinite;
+    bottom: -10px;
+  }
+
+  .heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 105, 180, 0.8);
+    border-radius: 50%;
+  }
+
+  .heart::before { top: -10px; left: 0; }
+  .heart::after { left: 10px; top: 0; }
+
+  @keyframes floatHearts {
+    0% { transform: translateY(0) rotate(45deg) scale(1); opacity: 1; }
+    100% { transform: translateY(-800px) rotate(45deg) scale(0.5); opacity: 0; }
+  }
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="memories.html">Our Memories</a>
+  <a href="letter.html">Love Letter</a>
+  <a href="about.html">About Us</a>
+  <a href="surprise.html">Surprise 🎁</a>
+</nav>
+
+<h1>A Special Surprise for You, My Queen 👑</h1>
+
+<div class="message" id="secretMessage">
+  <p>
+  My dearest <b>Anju</b>,  
+  You are my today, my tomorrow, and my forever.  
+  Every heartbeat of mine whispers your name, and every star in the sky reminds me of your smile.  
+  You are my favorite reason to believe in love.  
+  <br><br>
+  Here’s to *us*, for all the tomorrows we’ll share.  
+  <br><br>
+  💖 With endless love, <b>Ebin</b>
+  </p>
+</div>
+
+<button class="button" onclick="showSurprise()">Click for Magic ✨</button>
+
+<audio id="bgm" src="music.mp3" loop></audio>
+
+<script>
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }
+
+  function showSurprise() {
+    document.getElementById("bgm").play();
+    setInterval(createHeart, 200);
+    alert("💖 Surprise! You are the most precious gift life ever gave me, Anju 💖");
+  }
+</script>
+
+</body>
+</html>
